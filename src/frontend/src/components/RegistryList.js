@@ -12,7 +12,7 @@ class RegistryList extends React.Component {
         this.quantityChange = this.quantityChange.bind(this);
 
         var jsonServ = JSON.parse(`[]`)
-        fetch('http://projekt-tab.herokuapp.com:8080/service-history', {
+        fetch('https://projekt-tab.herokuapp.com/service-history', {
             credentials: 'include'
         })
         .then(response => response.json())
@@ -24,7 +24,7 @@ class RegistryList extends React.Component {
         })
 
         var json = JSON.parse(`[]`)
-        fetch('http://projekt-tab.herokuapp.com:8080/resource-list', {
+        fetch('https://projekt-tab.herokuapp.com/resource-list', {
             credentials: 'include'
         })
         .then(response => response.json())
@@ -37,7 +37,7 @@ class RegistryList extends React.Component {
         })
       
         var jsonRes = JSON.parse(`[]`)
-        fetch('http://projekt-tab.herokuapp.com:8080/services-list', {
+        fetch('https://projekt-tab.herokuapp.com/services-list', {
             credentials: 'include'
         })
         .then(response => response.json())
@@ -116,7 +116,7 @@ class RegistryList extends React.Component {
 
     handleSubmitNewRegistry(event) {
         event.preventDefault()
-        const URL = 'http://projekt-tab.herokuapp.com:8080/service-history'
+        const URL = 'https://projekt-tab.herokuapp.com/service-history'
 
         var services = []
         for (var i=1; i<this.state.nOfServices; i++) {
@@ -180,7 +180,7 @@ class RegistryList extends React.Component {
 
     handleSubmitFinishRegistry(event) {
         event.preventDefault()
-        const URL = 'http://projekt-tab.herokuapp.com:8080/service-history'
+        const URL = 'https://projekt-tab.herokuapp.com/service-history'
 
         var resources = []
         for (var i=1; i<this.state.nOfResources; i++) {

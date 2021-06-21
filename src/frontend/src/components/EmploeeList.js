@@ -6,7 +6,7 @@ class EmploeeList extends React.Component {
         super (props)
         this.handleSubmit = this.handleSubmit.bind(this);
         
-        fetch('http://projekt-tab.herokuapp.com:8080/employee-list', {
+        fetch('https://projekt-tab.herokuapp.com/employee-list', {
             credentials: 'include'
         })
         .then(response => response.json())
@@ -44,7 +44,7 @@ class EmploeeList extends React.Component {
 
     handleSubmit(event) {
         event.preventDefault()
-        const URL = 'http://projekt-tab.herokuapp.com:8080/employee-list'
+        const URL = 'https://projekt-tab.herokuapp.com/employee-list'
 
         const change = {
             "id": `${event.currentTarget.id}`,
@@ -95,7 +95,7 @@ class EmploeeList extends React.Component {
     }
 
     update() {
-        fetch('http://projekt-tab.herokuapp.com:8080/employee-list', {
+        fetch('https://projekt-tab.herokuapp.com/employee-list', {
             credentials: 'include'
         })
         .then(response => response.json())

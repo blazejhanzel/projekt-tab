@@ -42,7 +42,7 @@ function App() {
             }
         }
 
-        xhttp.open("GET", "http://projekt-tab.herokuapp.com:8080/login", true)
+        xhttp.open("GET", "https://projekt-tab.herokuapp.com/login", true)
         xhttp.withCredentials = true;
         xhttp.send()
     }
