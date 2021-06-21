@@ -93,6 +93,7 @@ class LoginForm extends React.Component {
                     <div className="form-group">
                         <label for="exampleInputEmail1">Nazwa użytkownika</label>
                         <input value={this.state.login} onChange={changeLogin} type="text" className="form-control" onKeyPress={this.onKeyUp} />
+                        <small id="emailHelp" className="form-text text-muted">Domyślne dane logowania: admin admin1</small>
                     </div>
                     <div className="form-group">
                         <label for="exampleInputPassword1">Hasło</label>
