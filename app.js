@@ -19,7 +19,8 @@ app.use(bodyParser.json()) // body będą przekazywane jako JSON
 app.use(cors({
     origin: [
         'http://127.0.0.1:3000',
-        'http://localhost:3000' 
+        'http://localhost:3000' ,
+        'https://blazejhanzel.github.io'
     ],
     credentials: true
 }))
