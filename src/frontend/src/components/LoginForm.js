@@ -68,7 +68,7 @@ class LoginForm extends React.Component {
             }
         }
 
-        xhttp.open("POST", "http://localhost:8080/login", true)
+        xhttp.open("POST", "http://projekt-tab.herokuapp.com:8080/login", true)
         xhttp.withCredentials = true;
         xhttp.setRequestHeader("Content-type", "application/json")
         xhttp.send(json)

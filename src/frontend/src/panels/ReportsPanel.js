@@ -12,7 +12,7 @@ class ReportsPanel extends React.Component {
     constructor(props) {
         super(props)
 
-        fetch("http://localhost:8080/reports", {
+        fetch("http://projekt-tab.herokuapp.com:8080/reports", {
             method: 'GET',
             credentials: 'include'
         })

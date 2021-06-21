@@ -7,7 +7,7 @@ class StatisticsReport extends React.Component {
     }
 
     componentDidMount() {
-        fetch(`http://localhost:8080/reports/statistics?year=${this.props.year}`, {
+        fetch(`http://projekt-tab.herokuapp.com:8080/reports/statistics?year=${this.props.year}`, {
             method: 'GET',
             credentials: 'include'
         })

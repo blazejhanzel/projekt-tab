@@ -6,7 +6,7 @@ class ServicesList extends React.Component {
         super (props)
         this.handleSubmit = this.handleSubmit.bind(this);
 
-        fetch('http://localhost:8080/services-list', {
+        fetch('http://projekt-tab.herokuapp.com:8080/services-list', {
             credentials: 'include'
         })
         .then(response => response.json())
@@ -32,7 +32,7 @@ class ServicesList extends React.Component {
     
     handleSubmit(event) {
         event.preventDefault()
-        const URL = 'http://localhost:8080/services-list'
+        const URL = 'http://projekt-tab.herokuapp.com:8080/services-list'
 
         const change = {
             "id": `${event.currentTarget.id}`,
@@ -80,7 +80,7 @@ class ServicesList extends React.Component {
     }
 
     update() {
-        fetch('http://localhost:8080/services-list', {
+        fetch('http://projekt-tab.herokuapp.com:8080/services-list', {
             credentials: 'include'
         })
         .then(response => response.json())

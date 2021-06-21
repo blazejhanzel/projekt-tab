@@ -6,7 +6,7 @@ class ResourceList extends React.Component {
         super (props)
         this.handleSubmit = this.handleSubmit.bind(this);
 
-        fetch('http://localhost:8080/resource-list', {
+        fetch('http://projekt-tab.herokuapp.com:8080/resource-list', {
             credentials: 'include'
         })
         .then(response => response.json())
@@ -28,7 +28,7 @@ class ResourceList extends React.Component {
 
     handleSubmit(event) {
         event.preventDefault()
-        const URL = 'http://localhost:8080/resource-list'
+        const URL = 'http://projekt-tab.herokuapp.com:8080/resource-list'
 
         const change = {
             "id": `${event.currentTarget.id}`,
@@ -76,7 +76,7 @@ class ResourceList extends React.Component {
     }
 
     update() {
-        fetch('http://localhost:8080/resource-list', {
+        fetch('http://projekt-tab.herokuapp.com:8080/resource-list', {
             credentials: 'include'
         })
         .then(response => response.json())

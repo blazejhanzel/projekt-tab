@@ -19,7 +19,7 @@ class Navbar extends React.Component {
             }
         }
 
-        xhttp.open("GET", "http://localhost:8080/logout", true)
+        xhttp.open("GET", "http://projekt-tab.herokuapp.com:8080/logout", true)
         xhttp.withCredentials = true
         xhttp.send()
     }
