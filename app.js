@@ -8,6 +8,7 @@ const MySQLStore = require('express-mysql-session')(session)
 
 // stałe definiujące parametry połączenia
 const port = process.env.PORT || 8080
+const host = process.env.HOST || "127.0.0.1"
 
 // zmienne serwera
 const app = express()
@@ -52,6 +53,6 @@ app.get('/', (req, res) => {
     res.send('Hello node API!')
 })
 
-app.listen(port, () => {
-    console.log(`Server running at port ${port}`);
+app.listen(port, host, () => {
+    console.log(`Server running at http://${host}:${port}`);
 })
