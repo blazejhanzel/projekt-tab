@@ -8,7 +8,7 @@ const MySQLStore = require('express-mysql-session')(session)
 
 // stałe definiujące parametry połączenia
 const port = process.env.PORT || 8080
-const host = process.env.HOST || "127.0.0.1"
+const host = process.env.HOST || "0.0.0.0"
 
 // zmienne serwera
 const app = express()
